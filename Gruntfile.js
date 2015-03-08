@@ -28,6 +28,7 @@ module.exports = function(grunt) {
 		compass: {
 			css: {
 				options: {
+					importPath: ['src/bower_components/skeleton/css'],
 					sassDir: 'src/styles',
 					cssDir: 'build/styles'
 				}
