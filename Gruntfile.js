@@ -15,9 +15,11 @@ module.exports = function(grunt) {
 			build: {
 				files: {
 					'build/main.js': ['src/main.jsx'],
+					'build/components/helloworld/helloworld.js': ['src/components/helloworld/helloworld.jsx']
 				},
 				options: {
-					transform: ['reactify']
+					transform: ['reactify'],
+					watch: true
 				}
 			}
 		},
