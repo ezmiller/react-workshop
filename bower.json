@@ -15,5 +15,6 @@
   "directory": "~/src/bower_components",
   "dependencies": {
     "skeleton": "~2.0.4",
+    "zepto": "~1.1.6"
   }
 }
