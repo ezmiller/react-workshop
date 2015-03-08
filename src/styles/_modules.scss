@@ -1,10 +1,15 @@
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
-a:hover {
-  color: #0FA0CE; }
+  color: #1EAEDB;
+  text-decoration: none;
 
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  color: #0FA0CE; 
+}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
