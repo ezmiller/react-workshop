@@ -18,8 +18,10 @@ module.exports = function(grunt) {
 					'build/components/helloworld/helloworld.js': ['src/components/helloworld/helloworld.jsx']
 				},
 				options: {
-					transform: ['reactify'],
-					watch: true
+					transform: [
+	          [ 'reactify', {'es6': true} ]
+	        ],
+	        watch: true
 				}
 			}
 		},
