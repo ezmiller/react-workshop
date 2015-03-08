@@ -24,6 +24,12 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		watch: {
+			all: {
+				files: ['build/**/*'],
+				tasks: ['default']
+			}
+		},
 		shell: {
       server: {
         command: 'pushd build/; python -m SimpleHTTPServer; popd'
@@ -31,12 +37,13 @@ module.exports = function(grunt) {
     }
 	});
 
-	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-web-server');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-browserify');
+	grunt.loadNpmTasks('grunt-contrib-watch')
+	grunt.loadNpmTasks('grunt-shell');
 
-	grunt.registerTask('default', ['clean', 'copy', 'browserify', 'shell:server']);
+	grunt.registerTask('default', ['clean', 'copy', 'browserify', 'shell:server', 'watch']);
 
 };
