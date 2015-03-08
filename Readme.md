@@ -14,7 +14,7 @@ npm install
 ### Steps
 1. Add components and component files in `src/components`.
 
-2. For the moment, it is necessary to manually add the components main file to the Gruntfile in order to create a bundle.
+2. For the moment, it is necessary to manually add the components main file to the Gruntfile in order to create a bundle.    
 		```
 		browserify: {
 			build: {
