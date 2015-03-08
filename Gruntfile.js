@@ -7,12 +7,12 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				files: [
-					{expand: true, cwd: 'src/', src: ['**/*.!(jsx|md|json)'], dest: 'build/'}
+					{expand: true, cwd: 'src/', src: ['**/*.!(jsx|md|json|scss)'], dest: 'build/'}
 				]
 			}
 		},
 		browserify: {
-			build: {
+			jsx: {
 				files: {
 					'build/main.js': ['src/main.jsx'],
 					'build/components/helloworld/helloworld.js': ['src/components/helloworld/helloworld.jsx'],
@@ -25,6 +25,14 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		compass: {
+			css: {
+				options: {
+					sassDir: 'src/styles',
+					cssDir: 'build/styles'
+				}
+			}
+		},
 		shell: {
       server: {
         command: 'pushd build/; python -m SimpleHTTPServer; popd'
@@ -34,10 +42,11 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-shell');
 
-	grunt.registerTask('default', ['clean', 'copy', 'browserify', 'shell:server']);
+	grunt.registerTask('default', ['clean', 'copy', 'browserify', 'compass', 'shell:server']);
 
 };
