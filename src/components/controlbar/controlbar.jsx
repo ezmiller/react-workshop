@@ -5,12 +5,12 @@
 
 	var Controlbar = React.createClass({
 		render: function() {
-			return (
-				<nav id="controlbar">
-				</nav>
+			return(
+				<nav id="controlbar"></nav>
 			);
 		}
 	});
 
 	module.exports = Controlbar;
+
 }());
