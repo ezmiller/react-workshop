@@ -16,8 +16,7 @@ module.exports = function(grunt) {
 				files: {
 					'build/main.js': ['src/main.jsx'],
 					'build/components/helloworld/helloworld.js': ['src/components/helloworld/helloworld.jsx'],
-					'build/components/controlbar/main.js': ['src/components/controlbar/main.jsx']
-					'build/components/helloworld/helloworld.js': ['src/components/helloworld/helloworld.jsx'],
+					'build/components/controlbar/main.js': ['src/components/controlbar/main.jsx'],
 					'build/components/primary-button/main.js': ['src/components/primary-button/main.jsx'],
 				},
 				options: {
