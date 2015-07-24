@@ -1,6 +1,7 @@
 {
   "name": "react-workshop",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ezmiller/react-workshop",
   "authors": [
     "Ethan Zane Miller <ethan@code-cuts.com>"
   ],
@@ -9,11 +10,11 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "./src/bower_components",
     "test",
     "tests"
   ],
-  "directory": "~/src/bower_components",
   "dependencies": {
-    "skeleton": "~2.0.4",
+    "skeleton": "~2.0.4"
   }
 }
